@@ -12,6 +12,9 @@
     {% bootstrap_css %}
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'index' %}">L´erotics Quadrinhos</a>
+    </nav>
 {% block content %}{% endblock %}
 
 {% bootstrap_javascript jquery='full' %}

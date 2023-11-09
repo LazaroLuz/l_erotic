@@ -1,4 +1,5 @@
 <!doctype html>
+{% load bootstrap4 %}
 {% load static %}
 <html>
 <head>
@@ -36,19 +37,22 @@
 </head>
 
 <body>
-<div class="container">
-    <h1 class="title">{{ comics.name }}</h1>
-    <p>{{ comics.description }}</p>
-    <div id="flipbook">
+    <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="{% url 'index' %}">L´erotics Quadrinhos</a>
+    </nav>
+    <div class="container">
+        <h1 class="title">{{ comics.name }}</h1>
+        <p>{{ comics.description }}</p>
+        <div id="flipbook">
 
-        {% for img in galeria %}
-            <div>
-                <img width="90%" height="90%" src="{{ img.file }}"/>
-            </div>
-        {% endfor %}
+            {% for img in galeria %}
+                <div>
+                    <img width="90%" height="90%" src="{{ img.file }}"/>
+                </div>
+            {% endfor %}
 
+        </div>
     </div>
-</div>
 <script type="text/javascript">
 		$('#flipbook').turn({
 			width: 1230,
