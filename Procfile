@@ -1,0 +1,1 @@
+web: gunicorn 'l_erotic.wsgi'

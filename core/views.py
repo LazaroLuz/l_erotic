@@ -11,7 +11,7 @@ class IndexViews(ListView):
     template_name = 'index.html'
     model = Comic
     paginate_by = 23
-    ordering = 'name'
+    ordering = '-id'
 
 
 class HqViews(TemplateView):

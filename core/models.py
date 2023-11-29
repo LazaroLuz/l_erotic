@@ -1,5 +1,5 @@
 from django.db import models
-from stdimage.models import StdImageField
+from stdimage import StdImageField
 
 from django.db.models import signals
 from django.template.defaultfilters import slugify

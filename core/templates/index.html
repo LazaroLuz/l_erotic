@@ -5,7 +5,7 @@
 {% block title %}Página Inicial{% endblock %}
 {% block content %}
 
-
+<div class="container">
     <div class="cn-container">
         <div class="cn-firstcolumn">
             <main>
@@ -21,7 +21,7 @@
                                     </a>
                                 </figure>
                                 <header>
-                                    <a href="{% url 'flip' c.slug %}" title="{{ c.name }}" data-popup-clique="1">
+                                    <a href="{% url 'hq' c.slug %}" title="{{ c.name }}" data-popup-clique="1">
                                         <h4>{{ c.name }}</h4></a>
                                 </header>
                                 <div class="cn-meta">{{ c.description }}</div>
@@ -52,4 +52,5 @@
 
             </ul>
     </div>
+</div>
 {% endblock %}

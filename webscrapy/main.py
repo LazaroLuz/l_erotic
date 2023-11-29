@@ -17,7 +17,6 @@ def link_to_image(links):
     if isinstance(links, list):
         for link in links:
             try:
-                print(link)
                 response = session.get(link, headers=headers, timeout=None)
                 soup = BeautifulSoup(response.text, 'lxml')
                 texto = soup.select_one('main > article > div > header > h1').get_text()
